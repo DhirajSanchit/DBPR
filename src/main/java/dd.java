@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class dd extends JFrame {
+public class dd extends JDialog {
     private JPanel contentPane;
     private JButton startButton;
     private JButton buttonCancel;
