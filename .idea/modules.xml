@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DBPR.iml" filepath="$PROJECT_DIR$/DBPR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DBPR.iml" filepath="$PROJECT_DIR$/.idea/DBPR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBPR1_GroupE/DBPR1_GroupE.iml" filepath="$PROJECT_DIR$/DBPR1_GroupE/DBPR1_GroupE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Project_3_5_11/Project_3_5_11.iml" filepath="$PROJECT_DIR$/../Project_3_5_11/Project_3_5_11.iml" />
     </modules>
   </component>
 </project>

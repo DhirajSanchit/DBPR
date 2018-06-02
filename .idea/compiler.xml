@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DBPR" />
+        <module name="DBPR1_GroupE" />
+        <module name="Project_3_5_11" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="DBPR" target="1.5" />
+      <module name="DBPR1_GroupE" target="1.5" />
+      <module name="Project_3_5_11" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
