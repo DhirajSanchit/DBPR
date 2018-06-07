@@ -35,31 +35,38 @@ public class Application extends JFrame {
         public final void start(){
         Application application = new Application();
         gbc = new GridBagConstraints();
-        JPanel space = new JPanel();
-        JPanel brace = new JPanel();
-        space.setBackground(Color.WHITE);
-        space.setSize(100,100);
-        
-        space.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createEtchedBorder(), "space Rules"
+        JPanel activeDirectoryPanel = new JPanel();
+        JPanel profitPanel = new JPanel();
+        JPanel cleverPanel = new JPanel ();
+
+
+
+
+
+        activeDirectoryPanel.setBackground(Color.WHITE);
+        activeDirectoryPanel.setSize(100,100);
+
+        activeDirectoryPanel.setBorder(BorderFactory.createTitledBorder(
+                BorderFactory.createEtchedBorder(), "Active Directory"
         ));
 
-            brace.setBackground(Color.WHITE);
-            brace.setSize(100,100);
-            brace.setBorder(BorderFactory.createTitledBorder(
+            profitPanel.setBackground(Color.WHITE);
+            profitPanel.setSize(100,100);
+            profitPanel.setBorder(BorderFactory.createTitledBorder(
                     BorderFactory.createEtchedBorder(), "brace Rules"
             ));
 
-            JTable activeDirectory = new JTable(1,5);
+            JTable activeDirectoryTable = new JTable(1,5);
             JTable clever = new JTable(1, 9);
             JTable profit = new JTable(1, 9);
             JList businessRules = new JList();
             JList signals = new JList();
             clever.setEnabled(false);
             profit.setEnabled(false);
-            activeDirectory.setEnabled(false);
-            space.add(activeDirectory);
-            space.add(clever, profit);
+            activeDirectoryTable.setEnabled(false);
+            activeDirectoryPanel.add(activeDirectoryTable);
+            //space.add(clever);
+            //space.add(profit);
 
 
 
@@ -113,13 +120,13 @@ public class Application extends JFrame {
         //Velden voor business rules en signalen
 
 
-         application.add(businessSignals);
-         application.add(businessRulesField);
-         application.add(signalDB);
+         //application.add(businessSignals);
+         //application.add(businessRulesField);
+         //application.add(signalDB);
         //application.add(label);
 
-           this.add(space);
-           //this.add(brace);
+           this.add(activeDirectoryPanel);
+           this.add(profitPanel);
     }
 
 
