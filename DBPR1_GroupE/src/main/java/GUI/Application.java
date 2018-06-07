@@ -32,7 +32,7 @@ public class Application extends JFrame {
 
 
 
-        public final void start () {
+        public Application(){
         Application application = new Application();
         gbc = new GridBagConstraints();
         JPanel space = new JPanel();
@@ -62,7 +62,7 @@ public class Application extends JFrame {
             space.add(clever, profit);
 
 
-            
+
 
 
 
@@ -127,8 +127,19 @@ public class Application extends JFrame {
 
 
 
-    /**
+    /**Method om de database connectie te starten**/
+        public void start(){
+            /**Database connectie start   **/
 
+
+        }
+
+    /**Method om de database connectie te stoppen**/
+        public void stop(){
+            /**Database connectie stopt**/
+        }
+
+    /**
     startButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             feedbackField.setText("Connection started");
