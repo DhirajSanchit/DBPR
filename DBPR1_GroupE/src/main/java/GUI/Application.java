@@ -32,14 +32,14 @@ public class Application extends JFrame {
 
 
 
-        public Application(){
+        public final void start(){
         Application application = new Application();
         gbc = new GridBagConstraints();
         JPanel space = new JPanel();
         JPanel brace = new JPanel();
         space.setBackground(Color.WHITE);
         space.setSize(100,100);
-        /*
+        
         space.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), "space Rules"
         ));
@@ -113,9 +113,9 @@ public class Application extends JFrame {
         //Velden voor business rules en signalen
 
 
-        //  application.add(businessSignals);
-        // application.add(businessRulesField);
-        // application.add(signalDB);
+         application.add(businessSignals);
+         application.add(businessRulesField);
+         application.add(signalDB);
         //application.add(label);
 
            this.add(space);
@@ -128,15 +128,17 @@ public class Application extends JFrame {
 
 
     /**Method om de database connectie te starten**/
-        public void start(){
+        public void startConnection(){
             /**Database connectie start   **/
 
+            System.out.println("connection started");
 
         }
 
     /**Method om de database connectie te stoppen**/
-        public void stop(){
+        public void stopConnection(){
             /**Database connectie stopt**/
+            System.out.println("Connection stopped");
         }
 
     /**
