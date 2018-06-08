@@ -9,6 +9,6 @@ public class Datacontroller {
     private ArrayList data;
     private ArrayList tableData;
 
-    
+
 
 }

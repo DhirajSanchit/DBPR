@@ -27,7 +27,7 @@ public class Application extends JFrame {
     private JPanel space;
     private JPanel businessSignals;
     private GridBagConstraints gbc;
-
+    private GridBagLayout gridBag;
 
 
 
@@ -35,56 +35,109 @@ public class Application extends JFrame {
         public final void start(){
         Application application = new Application();
         gbc = new GridBagConstraints();
+        gridBag = new GridBagLayout();
+        Container contentPane = getContentPane();
+
+
+
         JPanel activeDirectoryPanel = new JPanel();
         JPanel profitPanel = new JPanel();
         JPanel cleverPanel = new JPanel ();
+        JPanel signalsPanel = new JPanel ();
+        JPanel businessRulesPanel =  new JPanel();
+        contentPane.setLayout(gridBag);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
 
 
 
 
-
-        activeDirectoryPanel.setBackground(Color.WHITE);
-        activeDirectoryPanel.setSize(100,100);
-
-        activeDirectoryPanel.setBorder(BorderFactory.createTitledBorder(
+            activeDirectoryPanel.setBackground(Color.RED);
+            activeDirectoryPanel.setSize(100,100);
+            activeDirectoryPanel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), "Active Directory"
-        ));
+            ));
+            gbc.weightx=1;
+            gbc.gridx=0;
+            gbc.gridy=0;
+            gbc.fill = GridBagConstraints.FIRST_LINE_START;
+            gridBag.setConstraints(activeDirectoryPanel, gbc);
+            contentPane.add(activeDirectoryPanel);
 
-            profitPanel.setBackground(Color.WHITE);
+
+
+            profitPanel.setBackground(Color.BLUE);
             profitPanel.setSize(100,100);
             profitPanel.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createEtchedBorder(), "brace Rules"
+                    BorderFactory.createEtchedBorder(), "Profit"
             ));
+            gbc.weightx = 2;
+            gbc.gridx = 0;
+            gbc.gridy = 1;
+            gridBag.setConstraints(profitPanel, gbc);
+            contentPane.add(profitPanel);
+
+            //cleverPanel
+            cleverPanel.setBackground(Color.GREEN);
+            cleverPanel.setSize(100,100);
+            cleverPanel.setBorder(BorderFactory.createTitledBorder(
+                    BorderFactory.createEtchedBorder(), "Clever"));
+
+            gbc.weightx = 3;
+            gbc.gridx = 0;
+            gbc.gridy = 2;
+            gridBag.setConstraints(cleverPanel, gbc);
+            contentPane.add(cleverPanel);
+
+            signalsPanel.setBackground(Color.YELLOW);
+            signalsPanel.setSize(100,100);
+            signalsPanel.setBorder(BorderFactory.createTitledBorder(
+                    BorderFactory.createEtchedBorder(), "Signalen"));
+
+            gbc.gridx = 0;
+            gbc.gridy = 4;
+            gridBag.setConstraints(signalsPanel, gbc);
+            contentPane.add(signalsPanel);
+
+
+            businessRulesPanel.setBackground(Color.PINK);
+            businessRulesPanel.setSize(100,100);
+            businessRulesPanel.setBorder(BorderFactory.createTitledBorder(
+                    BorderFactory.createEtchedBorder(), "Business Rules"));
+            gbc.gridx = 0;
+            gbc.gridy = 5;
+            gridBag.setConstraints(businessRulesPanel, gbc);
+            contentPane.add(businessRulesPanel);
+
+
+
+
 
             JTable activeDirectoryTable = new JTable(1,5);
-            JTable clever = new JTable(1, 9);
-            JTable profit = new JTable(1, 9);
-            JList businessRules = new JList();
+            JTable cleverTable = new JTable(1, 9);
+            JTable profitTable = new JTable(1, 9);
+
+            JList businessRulesList = new JList();
             JList signals = new JList();
-            clever.setEnabled(false);
-            profit.setEnabled(false);
+
+            cleverTable.setEnabled(false);
+            profitTable.setEnabled(false);
             activeDirectoryTable.setEnabled(false);
+
             activeDirectoryPanel.add(activeDirectoryTable);
+            profitPanel.add(profitTable);
+            cleverPanel.add(cleverTable);
+            businessRulesPanel.add(businessRulesList);
+            signalsPanel.add(signals);
+
+
             //space.add(clever);
             //space.add(profit);
 
 
-
-
-
-
-
-
-
-
-
-
-
         setTitle("Leger des Heils - Audit");
         setVisible(true);
-        //setLayout(new GridBagLayout());
         setSize(900, 650);
-        //setContentPane(getContentPane());
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 
@@ -125,8 +178,8 @@ public class Application extends JFrame {
          //application.add(signalDB);
         //application.add(label);
 
-           this.add(activeDirectoryPanel);
-           this.add(profitPanel);
+           //this.add(activeDirectoryPanel);
+           //this.add(profitPanel);
     }
 
 
