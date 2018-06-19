@@ -19,8 +19,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+            <state relative-caret-position="270">
+              <caret line="79" column="38" lean-forward="true" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,8 +31,8 @@
       <file leaf-file-name="NotificationField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,8 +43,8 @@
       <file leaf-file-name="SignalField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="185">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +55,20 @@
       <file leaf-file-name="BusinessRulesField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="-410">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Field.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +79,8 @@
       <file leaf-file-name="DataBaseField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="249">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,6 +117,8 @@
       <find>derp</find>
       <find>insets</find>
       <find>busines</find>
+      <find>createBorder</find>
+      <find>signal</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,10 +134,10 @@
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Controllers/Datacontroller.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/DBPR1_GroupE.iml" />
-        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java" />
-        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java" />
       </list>
@@ -141,7 +155,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="411" />
     <option name="y" value="-9" />
     <option name="width" value="664" />
@@ -352,15 +366,15 @@
       <updated>1527958903775</updated>
       <workItem from="1527958905887" duration="1436000" />
       <workItem from="1528134860683" duration="87111000" />
-      <workItem from="1529256048809" duration="11248000" />
+      <workItem from="1529256048809" duration="13498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99795000" />
+    <option name="totallyTimeSpent" value="102045000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1318" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1318" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
@@ -533,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -550,30 +554,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -582,8 +566,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-410">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -592,8 +606,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        <state relative-caret-position="270">
+          <caret line="79" column="38" lean-forward="true" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

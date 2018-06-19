@@ -11,6 +11,7 @@ public class Field extends JPanel {
     void createBorder(String title){
         this.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), title));
+        //this.setB
 
 
     }

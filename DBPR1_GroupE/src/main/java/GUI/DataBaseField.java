@@ -23,11 +23,7 @@ public class DataBaseField extends Field {
     private Field businessRulesField;
     //private JPanel;
     private GridBagConstraints gbc;
-
     private JTable activeDirectoryTable, profitTable, cleverTable;
-
-
-
 
 
     public DataBaseField(){
@@ -35,7 +31,7 @@ public class DataBaseField extends Field {
         dim.width = 600;
         dim.height = 500;
         setPreferredSize(dim);
-        setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
+        setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
     /** instantie layout manager items **/
     gbc = new GridBagConstraints();
 
@@ -87,6 +83,11 @@ public class DataBaseField extends Field {
         cleverField.createBorder("Clever");
 
 
+        cleverField.setEnabled(false);
+        profitTable.setEnabled(false);
+        activeDirectoryTable.setEnabled(false);
+
+
         gbc.weightx = 3;
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -96,12 +97,7 @@ public class DataBaseField extends Field {
         add(cleverField, gbc);
 
 
-
-        /////////////// TABLE EXPERIMENT ////////////////////
-        cleverField.setEnabled(false);
-        profitTable.setEnabled(false);
-        activeDirectoryTable.setEnabled(false);
-
+        /////////////// TABLE EXPERIMENTATION ////////////////////
 
 //        activeDirectoryField.add(activeDirectoryTable);
 //        profitField.add(profitTable);

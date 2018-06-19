@@ -20,15 +20,12 @@ public class Application extends JFrame {
 
         public Application (){
 
-
             setTitle("Leger des Heils - Audit");
             setSize(900, 750);
 
             display = new JPanel(new GridBagLayout());
             this.getContentPane().add(display);
             gbc = new GridBagConstraints();
-
-
 
 
             /** Hoofd display van de applicatie**/
@@ -59,14 +56,10 @@ public class Application extends JFrame {
 //            gbc.weighty = 0.1;
             gbc.gridwidth = 2;
             gbc.anchor = GridBagConstraints.SOUTHWEST;
-            gbc.fill = GridBagConstraints.BOTH;
+            //gbc.fill = GridBagConstraints.BOTH;
+            gbc.insets = new Insets(0,5, 5,0);
             display.add(auditBlackBox, gbc);
             System.out.print("auditblackbox added!");
-
-
-
-
-
 
             /** Toevoeging van de Business Rules **/
             gbc.gridx = 3;
@@ -80,24 +73,13 @@ public class Application extends JFrame {
             /** Toevoeging van de Signalen **/
             gbc.gridx = 3;
             gbc.gridy = 2;
-//            gbc.gridwidth = 1;
-//            gbc.gridheight = 2;
+            gbc.gridheight = 1;
+            gbc.insets = new Insets(-1,5,5,0);
             gbc.anchor = GridBagConstraints.SOUTHEAST;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(signals, gbc);
 
 
-
-//            /** Panel Test **/
-//            JPanel panel = new JPanel();
-//            panel.setBackground(Color.BLUE);
-//            panel.setSize(100,100);
-//
-//            gbc.gridx = 3;
-//            gbc.gridy = 3;
-//            gbc.fill = GridBagConstraints.NONE;
-//            gbc.anchor = GridBagConstraints.SOUTHWEST;
-//            display.add(panel, gbc);
 
 
         setVisible(true);
@@ -108,32 +90,6 @@ public class Application extends JFrame {
 
 
         public final void start(){
-
-       /* ///////// Audit Blackbox Tabellen/////////
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.fill = GridBagConstraints.LINE_START;
-        add(auditBlackBox, gbc);
-
-
-        ///////// Business Rules /////////
-        gbc.gridx = 1;
-        gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.LINE_END;
-        add(businessRules, gbc);
-*/
-
-       // add(signals);
-        /**
-         * Initiëele velden ter bij het opstarten van het programma
-         *
-         */
-
-
-        /** Hieronder is de opzet en vervolgends een toevoeging van alle visuele elementen die de GUI bevat*/
-
-        /**  **/
-
 
         /**
          *  Methoden van de applicatie
@@ -155,7 +111,6 @@ public class Application extends JFrame {
 
 
         /** hieronder moet nog de close operatie voor de DB connectie  **/
-
 
 
     /**Method om de database connectie te starten**/

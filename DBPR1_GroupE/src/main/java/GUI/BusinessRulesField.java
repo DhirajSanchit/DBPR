@@ -18,7 +18,7 @@ public class BusinessRulesField extends Field {
 
     public BusinessRulesField() {
 
-        String text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
+        String fillertext = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
                 "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud " +
                 "xercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in " +
                 "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint " +
@@ -39,7 +39,7 @@ public class BusinessRulesField extends Field {
         /** Swing instanties voor de Audit blackbox DB  **/
           businessRulesList = new JList();
 //        businessRulesList = new JTextPane();
-//        businessRulesList.setText(text);
+//        businessRulesList.setText(filler);
         //businessRulesList.setLineWrap(true);
         setLayout(new GridBagLayout());
 
