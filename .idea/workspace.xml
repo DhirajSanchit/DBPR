@@ -15,21 +15,12 @@
     <SUITE FILE_PATH="coverage/DBPR$Main.ic" NAME="Main Coverage Results" MODIFIED="1528231971693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Datacontroller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Controllers/Datacontroller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="171">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java">
+      <file leaf-file-name="NotificationField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="151">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,20 +40,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Spel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Project_3_5_11/src/main/java/Spel.java">
+      <file leaf-file-name="SignalField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Speelveld.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Project_3_5_11/src/main/java/Speelveld.java">
+      <file leaf-file-name="BusinessRulesField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="36" column="62" lean-forward="true" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+            <state relative-caret-position="168">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBaseField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,10 +93,18 @@
       <find>Brace</find>
       <find>space</find>
       <find>cont</find>
-      <find>contentpane</find>
       <find>activeDirectory</find>
       <find>this.</find>
       <find>content</find>
+      <find>signalsPanel</find>
+      <find>contentpane</find>
+      <find>etched</find>
+      <find>field</find>
+      <find>database</find>
+      <find>contentPane</find>
+      <find>derp</find>
+      <find>insets</find>
+      <find>busines</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,10 +116,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/dd.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Application.java" />
-        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java" />
         <option value="$PROJECT_DIR$/../Project_3_5_11/src/main/java/Speelveld.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Controllers/Datacontroller.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/DBPR1_GroupE.iml" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java" />
       </list>
     </option>
@@ -120,9 +142,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="641" />
-    <option name="width" value="662" />
-    <option name="height" value="775" />
+    <option name="x" value="411" />
+    <option name="y" value="-9" />
+    <option name="width" value="664" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -190,6 +213,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -323,15 +351,16 @@
       <option name="presentableId" value="Default" />
       <updated>1527958903775</updated>
       <workItem from="1527958905887" duration="1436000" />
-      <workItem from="1528134860683" duration="35610000" />
+      <workItem from="1528134860683" duration="87111000" />
+      <workItem from="1529256048809" duration="11248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37046000" />
+    <option name="totallyTimeSpent" value="99795000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1312" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1318" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
@@ -345,11 +374,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32352942" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3294753" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32972136" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23302469" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1843318" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -357,11 +385,13 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" x="0" y="0" width="279" height="584" id="Documentation" order="10" side_tool="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3294753" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -373,7 +403,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
@@ -402,40 +432,57 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/JDialog.java">
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="1046" selection-start-line="1046" selection-end-line="1046" />
+        <state relative-caret-position="595">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding>
-            <element signature="e#39568#39569#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Application.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/Container.java">
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1147">
-          <caret line="1004" selection-start-line="1004" selection-end-line="1004" />
+        <state relative-caret-position="442">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="16" />
           <folding>
-            <element signature="e#38973#38974#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state relative-caret-position="221">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Project_3_5_11/src/main/java/Spel.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/JDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="128">
+          <caret line="1046" selection-start-line="1046" selection-end-line="1046" />
         </state>
       </provider>
     </entry>
@@ -450,6 +497,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_mastering-java-swing-part1.zip/mastering-java-swing-part1-m3-controls-layout-exercise-files/Swing11 - GridBagLayout/src/Toolbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Project_3_5_11/src/main/java/Spel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="972" selection-start-line="972" selection-end-line="972" />
+          <folding>
+            <element signature="e#37612#37613#0" expanded="true" />
+            <element signature="e#38925#38926#0" expanded="true" />
+            <element signature="e#38973#38974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/DBPR1_GroupE.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Field.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -458,8 +545,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/SignalField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -468,8 +592,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+        <state relative-caret-position="171">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

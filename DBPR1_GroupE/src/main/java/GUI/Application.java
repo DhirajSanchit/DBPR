@@ -1,146 +1,129 @@
 package GUI;
 
-import com.sun.jmx.snmp.SnmpOpaque;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import static javafx.scene.input.KeyCode.J;
-
 public class Application extends JFrame {
-    private JPanel contentPane, business;
-    private JButton startButton;
-    private JButton buttonCancel;
-    private JButton resetButton;
-    private JButton printButton;
-    private JPanel businessRulesField;
-    private JLabel businessRulesLabel;
-    private JTextPane businessRulesTA;
     private JList brRapportList;
     private JLabel rapportLabel;
-    private JLabel applicationTitleLabel;
-    private JPanel buttonsField;
-    private JPanel databaseField;
     private JTextPane feedbackField;
-    private JPanel signalDB;
-    private JPanel space;
-    private JPanel businessSignals;
     private GridBagConstraints gbc;
     private GridBagLayout gridBag;
+    private DataBaseField auditBlackBox;
+    private BusinessRulesField businessRules;
+    private SignalField signals;
+    private JPanel display;
+    private NotificationField notfications;
 
+
+        public Application (){
+
+
+            setTitle("Leger des Heils - Audit");
+            setSize(900, 750);
+
+            display = new JPanel(new GridBagLayout());
+            this.getContentPane().add(display);
+            gbc = new GridBagConstraints();
+
+
+
+
+            /** Hoofd display van de applicatie**/
+
+//            System.out.println("Initiate");
+             auditBlackBox = new DataBaseField();
+             businessRules = new BusinessRulesField();
+             signals = new SignalField();
+             notfications = new NotificationField();
+//            System.out.println("Instantiated");
+//
+
+            /** Toevoeging van de notificatie panel**/
+            gbc.gridx = 0;
+            gbc.gridy = 0;
+            gbc.weightx = 1;
+            gbc.weighty = 1;
+            gbc.gridwidth = 2;
+            gbc.anchor = GridBagConstraints.NORTHWEST;
+            gbc.fill = GridBagConstraints.BOTH;
+            display.add(notfications, gbc);
+            System.out.print("auditblackbox added!");
+
+            /** Toevoeging van de de 3 Tabellen van Leger des Heils  **/
+            gbc.gridx = 0;
+            gbc.gridy = 2;
+//            gbc.weightx = 0.1;
+//            gbc.weighty = 0.1;
+            gbc.gridwidth = 2;
+            gbc.anchor = GridBagConstraints.SOUTHWEST;
+            gbc.fill = GridBagConstraints.BOTH;
+            display.add(auditBlackBox, gbc);
+            System.out.print("auditblackbox added!");
+
+
+
+
+
+
+            /** Toevoeging van de Business Rules **/
+            gbc.gridx = 3;
+            gbc.gridy = 0;
+//            gbc.gridwidth = 1;
+//            gbc.gridheight = 2;
+            gbc.anchor = GridBagConstraints.NORTHEAST;
+            gbc.fill = GridBagConstraints.BOTH;
+            display.add(businessRules, gbc);
+
+            /** Toevoeging van de Signalen **/
+            gbc.gridx = 3;
+            gbc.gridy = 2;
+//            gbc.gridwidth = 1;
+//            gbc.gridheight = 2;
+            gbc.anchor = GridBagConstraints.SOUTHEAST;
+            gbc.fill = GridBagConstraints.BOTH;
+            display.add(signals, gbc);
+
+
+
+//            /** Panel Test **/
+//            JPanel panel = new JPanel();
+//            panel.setBackground(Color.BLUE);
+//            panel.setSize(100,100);
+//
+//            gbc.gridx = 3;
+//            gbc.gridy = 3;
+//            gbc.fill = GridBagConstraints.NONE;
+//            gbc.anchor = GridBagConstraints.SOUTHWEST;
+//            display.add(panel, gbc);
+
+
+        setVisible(true);
+
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        }
 
 
 
         public final void start(){
-        Application application = new Application();
-        gbc = new GridBagConstraints();
-        gridBag = new GridBagLayout();
-        Container contentPane = getContentPane();
+
+       /* ///////// Audit Blackbox Tabellen/////////
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.fill = GridBagConstraints.LINE_START;
+        add(auditBlackBox, gbc);
 
 
+        ///////// Business Rules /////////
+        gbc.gridx = 1;
+        gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.LINE_END;
+        add(businessRules, gbc);
+*/
 
-        JPanel activeDirectoryPanel = new JPanel();
-        JPanel profitPanel = new JPanel();
-        JPanel cleverPanel = new JPanel ();
-        JPanel signalsPanel = new JPanel ();
-        JPanel businessRulesPanel =  new JPanel();
-        contentPane.setLayout(gridBag);
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-
-
-
-
-            activeDirectoryPanel.setBackground(Color.RED);
-            activeDirectoryPanel.setSize(100,100);
-            activeDirectoryPanel.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createEtchedBorder(), "Active Directory"
-            ));
-            gbc.weightx=1;
-            gbc.gridx=0;
-            gbc.gridy=0;
-            gbc.fill = GridBagConstraints.FIRST_LINE_START;
-            gridBag.setConstraints(activeDirectoryPanel, gbc);
-            contentPane.add(activeDirectoryPanel);
-
-
-
-            profitPanel.setBackground(Color.BLUE);
-            profitPanel.setSize(100,100);
-            profitPanel.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createEtchedBorder(), "Profit"
-            ));
-            gbc.weightx = 2;
-            gbc.gridx = 0;
-            gbc.gridy = 1;
-            gridBag.setConstraints(profitPanel, gbc);
-            contentPane.add(profitPanel);
-
-            //cleverPanel
-            cleverPanel.setBackground(Color.GREEN);
-            cleverPanel.setSize(100,100);
-            cleverPanel.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createEtchedBorder(), "Clever"));
-
-            gbc.weightx = 3;
-            gbc.gridx = 0;
-            gbc.gridy = 2;
-            gridBag.setConstraints(cleverPanel, gbc);
-            contentPane.add(cleverPanel);
-
-            signalsPanel.setBackground(Color.YELLOW);
-            signalsPanel.setSize(100,100);
-            signalsPanel.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createEtchedBorder(), "Signalen"));
-
-            gbc.gridx = 0;
-            gbc.gridy = 4;
-            gridBag.setConstraints(signalsPanel, gbc);
-            contentPane.add(signalsPanel);
-
-
-            businessRulesPanel.setBackground(Color.PINK);
-            businessRulesPanel.setSize(100,100);
-            businessRulesPanel.setBorder(BorderFactory.createTitledBorder(
-                    BorderFactory.createEtchedBorder(), "Business Rules"));
-            gbc.gridx = 0;
-            gbc.gridy = 5;
-            gridBag.setConstraints(businessRulesPanel, gbc);
-            contentPane.add(businessRulesPanel);
-
-
-
-
-
-            JTable activeDirectoryTable = new JTable(1,5);
-            JTable cleverTable = new JTable(1, 9);
-            JTable profitTable = new JTable(1, 9);
-
-            JList businessRulesList = new JList();
-            JList signals = new JList();
-
-            cleverTable.setEnabled(false);
-            profitTable.setEnabled(false);
-            activeDirectoryTable.setEnabled(false);
-
-            activeDirectoryPanel.add(activeDirectoryTable);
-            profitPanel.add(profitTable);
-            cleverPanel.add(cleverTable);
-            businessRulesPanel.add(businessRulesList);
-            signalsPanel.add(signals);
-
-
-            //space.add(clever);
-            //space.add(profit);
-
-
-        setTitle("Leger des Heils - Audit");
-        setVisible(true);
-        setSize(900, 650);
-
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-
+       // add(signals);
         /**
          * Initiëele velden ter bij het opstarten van het programma
          *
@@ -160,26 +143,14 @@ public class Application extends JFrame {
          */
 
         /**
-        databaseField = new JPanel();
+
         databaseField.setLayout(new GridLayout(3, 0, 5,5));
         databaseField.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createEtchedBorder(), "Business Rules"
         ));
 
         **/
-            //databaseField.add;
 
-
-        //Velden voor business rules en signalen
-
-
-         //application.add(businessSignals);
-         //application.add(businessRulesField);
-         //application.add(signalDB);
-        //application.add(label);
-
-           //this.add(activeDirectoryPanel);
-           //this.add(profitPanel);
     }
 
 
@@ -251,5 +222,9 @@ private void onCancel() {
 }
 
  **/
+
+
+
+
     }
 
