@@ -1,6 +1,7 @@
 package GUI;
 
 
+import DB.DBConnection;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -16,6 +17,8 @@ public class Application extends JFrame {
     private SignalField signals;
     private JPanel display;
     private NotificationField notfications;
+    private DBConnection databaseConnection;
+
 
 
         public Application (){
@@ -35,6 +38,7 @@ public class Application extends JFrame {
              businessRules = new BusinessRulesField();
              signals = new SignalField();
              notfications = new NotificationField();
+             databaseConnection = new DBConnection();
 //            System.out.println("Instantiated");
 //
 
@@ -47,7 +51,7 @@ public class Application extends JFrame {
             gbc.anchor = GridBagConstraints.NORTHWEST;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(notfications, gbc);
-            System.out.print("auditblackbox added!");
+            System.out.println("notificationpanel added!");
 
             /** Toevoeging van de de 3 Tabellen van Leger des Heils  **/
             gbc.gridx = 0;
@@ -59,7 +63,7 @@ public class Application extends JFrame {
             //gbc.fill = GridBagConstraints.BOTH;
             gbc.insets = new Insets(0,5, 5,0);
             display.add(auditBlackBox, gbc);
-            System.out.print("auditblackbox added!");
+            System.out.println("auditblackbox added!");
 
             /** Toevoeging van de Business Rules **/
             gbc.gridx = 3;
@@ -69,6 +73,7 @@ public class Application extends JFrame {
             gbc.anchor = GridBagConstraints.NORTHEAST;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(businessRules, gbc);
+            System.out.println("Business Rules added!");
 
             /** Toevoeging van de Signalen **/
             gbc.gridx = 3;
@@ -78,6 +83,8 @@ public class Application extends JFrame {
             gbc.anchor = GridBagConstraints.SOUTHEAST;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(signals, gbc);
+            System.out.println("Signals added!");
+
 
 
 
@@ -90,35 +97,15 @@ public class Application extends JFrame {
 
 
         public final void start(){
-
-        /**
-         *  Methoden van de applicatie
-         *
-         *  De archictectuur van deze opzet kan nog veranderd worden
-         *  Voor nu is er een overname van actionlisteners voor de knoppen
-         */
-
-        /**
-
-        databaseField.setLayout(new GridLayout(3, 0, 5,5));
-        databaseField.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createEtchedBorder(), "Business Rules"
-        ));
-
-        **/
-
-    }
+         startConnection();
+         }
 
 
-        /** hieronder moet nog de close operatie voor de DB connectie  **/
 
-
-    /**Method om de database connectie te starten**/
+        /**Method om de database connectie te starten**/
         public void startConnection(){
             /**Database connectie start   **/
-
-            System.out.println("connection started");
-
+            databaseConnection.login("appie3","admin1234567890");
         }
 
     /**Method om de database connectie te stoppen**/

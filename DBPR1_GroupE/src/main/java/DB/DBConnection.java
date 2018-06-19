@@ -4,16 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class DBConnection {
-    /**
-     * @param args the command line arguments
-     */
 
 
-        static String username = "appie3";
-        static String password = "admin1234567890";
+        static String user = "appie3";
+        static String pass = "admin1234567890";
 
-    public static void main(String[] args) {
+
+    public void login(String username, String password) {
         String url = "jdbc:sqlserver://localhost:1433;databaseName=AuditBlackBox";
         Connection con = null;
 
