@@ -11,10 +11,10 @@ public class NotificationField extends Field{
 
     public NotificationField(){
 
-        Dimension dim = getPreferredSize();
-        dim.width = 600;
-        dim.height = 250;
-        setPreferredSize(dim);
+//        Dimension dim = getPreferredSize();
+//        dim.width = 900;
+//        dim.height = 200;
+//        setPreferredSize(dim);
 
 
 

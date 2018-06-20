@@ -41,17 +41,15 @@ public class Application extends JFrame {
              databaseConnection = new DBConnection();
 //            System.out.println("Instantiated");
 //
-
-            /** Toevoeging van de notificatie panel**/
-            gbc.gridx = 0;
             gbc.gridy = 0;
             gbc.weightx = 1;
             gbc.weighty = 1;
             gbc.gridwidth = 2;
-            gbc.anchor = GridBagConstraints.NORTHWEST;
+            gbc.anchor = GridBagConstraints.FIRST_LINE_START;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(notfications, gbc);
-            System.out.println("notificationpanel added!");
+            System.out.print("notificationpanel added!");
+
 
             /** Toevoeging van de de 3 Tabellen van Leger des Heils  **/
             gbc.gridx = 0;
@@ -59,18 +57,30 @@ public class Application extends JFrame {
 //            gbc.weightx = 0.1;
 //            gbc.weighty = 0.1;
             gbc.gridwidth = 2;
-            gbc.anchor = GridBagConstraints.SOUTHWEST;
-            //gbc.fill = GridBagConstraints.BOTH;
-            gbc.insets = new Insets(0,5, 5,0);
+//            gbc.gridheight = 3;
+            gbc.anchor = GridBagConstraints.LAST_LINE_START;
+            gbc.fill = GridBagConstraints.BOTH;
             display.add(auditBlackBox, gbc);
+            System.out.print("auditblackbox added!");
             System.out.println("auditblackbox added!");
+
+//            /** Toevoeging van de notificatie panel**/
+//            gbc.gridx = 0;
+//            gbc.gridy = 3;
+//            gbc.weightx = 1;
+//            gbc.weighty = 0.5;
+//            gbc.gridwidth = 4;
+//            gbc.anchor = GridBagConstraints.LAST_LINE_START;
+//            gbc.fill = GridBagConstraints.HORIZONTAL;
+//            display.add(notfications, gbc);
+//            System.out.println("notificationpanel added!");
 
             /** Toevoeging van de Business Rules **/
             gbc.gridx = 3;
             gbc.gridy = 0;
 //            gbc.gridwidth = 1;
 //            gbc.gridheight = 2;
-            gbc.anchor = GridBagConstraints.NORTHEAST;
+            gbc.anchor = GridBagConstraints.FIRST_LINE_END;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(businessRules, gbc);
             System.out.println("Business Rules added!");
@@ -79,13 +89,11 @@ public class Application extends JFrame {
             gbc.gridx = 3;
             gbc.gridy = 2;
             gbc.gridheight = 1;
-            gbc.insets = new Insets(-1,5,5,0);
-            gbc.anchor = GridBagConstraints.SOUTHEAST;
+            gbc.insets = new Insets(2,5,5,2);
+            gbc.anchor = GridBagConstraints.LAST_LINE_END;
             gbc.fill = GridBagConstraints.BOTH;
             display.add(signals, gbc);
             System.out.println("Signals added!");
-
-
 
 
 

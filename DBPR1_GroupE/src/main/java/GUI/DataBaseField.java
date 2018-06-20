@@ -29,7 +29,7 @@ public class DataBaseField extends Field {
     public DataBaseField(){
         Dimension dim = getPreferredSize();
         dim.width = 600;
-        dim.height = 500;
+        dim.height = 550;
         setPreferredSize(dim);
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
     /** instantie layout manager items **/
