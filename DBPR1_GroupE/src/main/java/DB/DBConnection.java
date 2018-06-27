@@ -4,12 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import static java.lang.Class.forName;
+
 
 public class DBConnection {
 
 
         static String user = "appie3";
         static String pass = "admin1234567890";
+
 
 
     public void login(String username, String password) {

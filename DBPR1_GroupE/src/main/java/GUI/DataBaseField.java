@@ -10,8 +10,13 @@ package GUI;
 
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import java.awt.*;
 
+import static javafx.scene.input.KeyCode.J;
 
 public class DataBaseField extends Field {
 
@@ -24,13 +29,65 @@ public class DataBaseField extends Field {
     private JTable activeDirectoryTable, profitTable, cleverTable;
 
 
+    private String[] columnNames = {"Source", "Hit", "Last", "Ur_Diff","Source", "Hit", "Last", "Ur_Diff"};
+    private Object[][] data = {
+            {"Swing Timer", 2.99, 5, 1.01},
+            {"Swing Worker", 7.10, 5, 1.010},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"Swing Worker", 7.10, 5, 1.010},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"Swing Timer", 2.99, 5, 1.01},
+            {"Swing Worker", 7.10, 5, 1.010},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"Swing Worker", 7.10, 5, 1.010},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+//            {"TableModelListener", 25.05, 5, 1.01},
+
+
+};
+    private DefaultTableModel model = new DefaultTableModel(data, columnNames);
+
+
+
     public DataBaseField(){
 
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         createBorder("Databases");
 
     /** instantie layout manager items **/
-    gbc = new GridBagConstraints();
+        gbc = new GridBagConstraints();
+        setLayout(new GridBagLayout());
 
     /** Swing instanties voor de Audit blackbox DB  **/
 
@@ -39,23 +96,52 @@ public class DataBaseField extends Field {
      profitField = new Field ();
      cleverField = new Field ();
 
-     ///////// Scrollpanes making the tablefields scrollable/////////
-     adScrollPane = new JScrollPane();
-     prScrollPane = new JScrollPane();
-     clvrScrollPane = new JScrollPane();
 
-     ///////// AuditBlackBox Tables/////////
-     activeDirectoryTable = new JTable(1,5);
-     cleverTable = new JTable(1, 9);
-     profitTable = new JTable(1, 9);
+      ///////// AuditBlackBox Tables/////////
+      activeDirectoryTable = new JTable(model);
+      profitTable = new JTable(model);
+      cleverTable = new JTable(model);
 
 
-     setLayout(new GridBagLayout());
+      //////// Scrollpanes making the tablefields scrollable/////////
+      adScrollPane = new JScrollPane(activeDirectoryTable,
+              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+      prScrollPane = new JScrollPane(profitTable,
+              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+      clvrScrollPane = new JScrollPane(cleverTable,
+              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        activeDirectoryTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+        activeDirectoryTable.setFillsViewportHeight(true);
+
+        profitTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+        profitTable.setFillsViewportHeight(true);
+
+        cleverTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+        cleverTable.setFillsViewportHeight(true);
+//
+
+//        gbc.weightx = 0.0001;
+//        gbc.weighty = 0.0001;
+//        gbc.gridx = 0;
+//        gbc.gridy = 0;
+//        gbc.fill = GridBagConstraints.BOTH;
+//        gbc.anchor = GridBagConstraints.CENTER;
+
+
+        /** /////////////// TABLE EXPERIMENTATION ////////////////////  **/
+
+        /** /////////////// TABLE EXPERIMENTATION //////////////////// **/
+
+
 
 
         ///////// GridbagConstrains constants/////////
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.5;
+        gbc.weightx = 0.005;
+        gbc.weighty = 0.005;
         gbc.fill = GridBagConstraints.BOTH;
         Insets insets = new Insets(5,5,10,5);
 
@@ -64,41 +150,108 @@ public class DataBaseField extends Field {
         activeDirectoryField.createBorder("Active Directory");
         activeDirectoryField.setLayout(new GridBagLayout());
 
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        activeDirectoryField.add(activeDirectoryTable.getTableHeader(), gbc);
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        activeDirectoryField.add(adScrollPane, gbc);
+
         gbc.gridx=0;
         gbc.gridy=0;
         gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-        gbc.insets = insets;
-        activeDirectoryField.add(activeDirectoryTable,gbc);
-        add(adScrollPane.add(activeDirectoryField), gbc);
+        //gbc.insets = insets;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.gridwidth = 1/100;
+        add(activeDirectoryField, gbc);
 
-        ///////// Profit /////////
+        /////// Profit /////////
         profitField.setBackground(Color.BLUE);
         profitField.createBorder("Profit");
         profitField.setLayout(new GridBagLayout());
 
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridheight = 1;
+        profitField.add(profitTable.getTableHeader(), gbc);
         gbc.gridx = 0;
         gbc.gridy = 1;
-        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-        gbc.insets = insets;
-        profitField.add(profitTable, gbc);
-        add(prScrollPane.add(profitField), gbc);
+        profitField.add(prScrollPane, gbc);
 
-        ///////// Clever /////////
+
+//        profitField.add(profitTable.getTableHeader(), gbc);
+//        profitField.add(profitTable, gbc);
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.anchor = GridBagConstraints.NORTHWEST;
+        gbc.insets = insets;
+        add(profitField, gbc);
+
+        /////// Clever /////////
         cleverField.setBackground(Color.GREEN);
         cleverField.createBorder("Clever");
         cleverField.setLayout(new GridBagLayout());
 
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.anchor = GridBagConstraints.NORTH;
         gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-        gbc.insets = insets;
-        cleverField.add(cleverTable, gbc);
-        add(clvrScrollPane.add(cleverField), gbc);
+        gbc.gridy = 0;
+        cleverField.add(cleverTable.getTableHeader(), gbc);
+        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        cleverField.add(clvrScrollPane, gbc);
+
+
+        gbc.anchor = GridBagConstraints.NORTHWEST;;
+        //gbc.insets = insets;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        add(cleverField, gbc);
+
+
+
+//        gbc.gridx = 0;
+//        gbc.gridy = 0;
+//        gbc.anchor = GridBagConstraints.BASELINE;
+//        gbc.fill = GridBagConstraints.BOTH;
+//        cleverField.add(cleverTable.getTableHeader(), gbc);
+//        cleverField.add(clvrScrollPane, gbc);
+//
+//        gbc.gridx = 0;
+//        gbc.gridy = 2;
+//        gbc.gridwidth = 1;
+//        gbc.gridheight = 1;
+//        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
+//        gbc.insets = insets;
+//        add(cleverField, gbc);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         /////////////// TABLE CELLS/ DATA CANNOT BE EDITTED////////////////////
         cleverField.setEnabled(false);
         profitTable.setEnabled(false);
         activeDirectoryTable.setEnabled(false);
+
+
         /////////////// TABLE EXPERIMENTATION ////////////////////
 //        activeDirectoryField.add(activeDirectoryTable);
 //        profitField.add(profitTable);
@@ -106,6 +259,8 @@ public class DataBaseField extends Field {
         /////////////// TABLE EXPERIMENT END ////////////////////
 
      }
+
+
 
 
 }

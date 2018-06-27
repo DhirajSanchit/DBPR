@@ -30,15 +30,15 @@ public class Display extends Field{
 
 
         /** GridBagConstraints die ervoor zorgen dat de extra ruimte verminderd word tussen Velden **/
-        gbc.weightx = 0.001;
-        gbc.weighty = 0.001;
+        gbc.weightx = 0.000001;
+        gbc.weighty = 0.000001;
         Insets insets = new Insets(5,5,5,5);
         gbc.insets = insets;
 
         /** Knoppen **/
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.gridwidth = 10;
+        gbc.gridwidth = 2;
         gbc.gridheight = 1;
         gbc.anchor = GridBagConstraints.NORTH;
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -46,20 +46,24 @@ public class Display extends Field{
         System.out.println("Buttons added!");
 
         /** Toevoeging van de de 3 Tabellen van Leger des Heils  **/
+
+        gbc.weightx = 0.001;
+        gbc.weighty = 0.001;
+
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.gridwidth = 3;
         gbc.gridheight = 3;
-        gbc.anchor = GridBagConstraints.NORTH;
+        gbc.anchor = GridBagConstraints.NORTHWEST;
         gbc.fill = GridBagConstraints.BOTH;
-        add(new JScrollPane(auditBlackBox), gbc);
+        add(auditBlackBox, gbc);
         System.out.println("auditblackbox added!");
 
         //Resizing van de WeightX en WeightY, zodat de Fields aan de rechterkant correct getoond worden.
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.5;
-//
-//        /** Toevoeging van de Business Rules **/
+        gbc.weightx = 0.001;
+        gbc.weighty = 0.001;
+
+        /** Toevoeging van de Business Rules **/
         gbc.gridx = 4;
         gbc.gridy = 1;
         gbc.gridheight = 1;
@@ -73,7 +77,7 @@ public class Display extends Field{
         gbc.gridx = 4;
         gbc.gridy = 2;
         gbc.gridheight = 2;
-        gbc.anchor = GridBagConstraints.LINE_END;
+        gbc.anchor = GridBagConstraints.SOUTHEAST;
         gbc.fill = GridBagConstraints.BOTH;
         add(signals, gbc);
         System.out.println("Signals added!");
@@ -83,7 +87,7 @@ public class Display extends Field{
         //Resizing van de opvulling van de cellen. Zorgt ervoor dat de Notificaties geen andere JComponents
         //opzij schuift. Weighty zorgt ervoor dat de grote van dit component verticaal iets groter is dan 1 cel.
         gbc.weightx = 1;
-        gbc.weighty = 0.095;
+        gbc.weighty = 0.0001;
 
         gbc.gridx = 0;
         gbc.gridy = 5;
@@ -94,8 +98,6 @@ public class Display extends Field{
         //gbc.insets = new Insets(0,0,0,0);
         add(notfications, gbc);
         System.out.println("notificationpanel added!");
-
-
 
         buttons.setStringListener(new StringListener() {
             public void textEmitted(String text) {
