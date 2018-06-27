@@ -15,92 +15,25 @@ public class Application extends JFrame {
     private DataBaseField auditBlackBox;
     private BusinessRulesField businessRules;
     private SignalField signals;
-    private JPanel display;
     private NotificationField notfications;
     private DBConnection databaseConnection;
+    private ButtonField buttons;
+    private Display display;
 
+    {
+        setTitle("Leger des Heils - Audit");
+        setSize(1200, 1000);
+    }
 
-
-        public Application (){
-
-            setTitle("Leger des Heils - Audit");
-            setSize(900, 750);
-
-            display = new JPanel(new GridBagLayout());
+        public Application () {
+            display = new Display();
+            databaseConnection = new DBConnection();
             this.getContentPane().add(display);
-            gbc = new GridBagConstraints();
-
-
-            /** Hoofd display van de applicatie**/
-
-//            System.out.println("Initiate");
-             auditBlackBox = new DataBaseField();
-             businessRules = new BusinessRulesField();
-             signals = new SignalField();
-             notfications = new NotificationField();
-             databaseConnection = new DBConnection();
-//            System.out.println("Instantiated");
-//
-            gbc.gridy = 0;
-            gbc.weightx = 1;
-            gbc.weighty = 1;
-            gbc.gridwidth = 2;
-            gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-            gbc.fill = GridBagConstraints.BOTH;
-            display.add(notfications, gbc);
-            System.out.print("notificationpanel added!");
-
-
-            /** Toevoeging van de de 3 Tabellen van Leger des Heils  **/
-            gbc.gridx = 0;
-            gbc.gridy = 2;
-//            gbc.weightx = 0.1;
-//            gbc.weighty = 0.1;
-            gbc.gridwidth = 2;
-//            gbc.gridheight = 3;
-            gbc.anchor = GridBagConstraints.LAST_LINE_START;
-            gbc.fill = GridBagConstraints.BOTH;
-            display.add(auditBlackBox, gbc);
-            System.out.print("auditblackbox added!");
-            System.out.println("auditblackbox added!");
-
-//            /** Toevoeging van de notificatie panel**/
-//            gbc.gridx = 0;
-//            gbc.gridy = 3;
-//            gbc.weightx = 1;
-//            gbc.weighty = 0.5;
-//            gbc.gridwidth = 4;
-//            gbc.anchor = GridBagConstraints.LAST_LINE_START;
-//            gbc.fill = GridBagConstraints.HORIZONTAL;
-//            display.add(notfications, gbc);
-//            System.out.println("notificationpanel added!");
-
-            /** Toevoeging van de Business Rules **/
-            gbc.gridx = 3;
-            gbc.gridy = 0;
-//            gbc.gridwidth = 1;
-//            gbc.gridheight = 2;
-            gbc.anchor = GridBagConstraints.FIRST_LINE_END;
-            gbc.fill = GridBagConstraints.BOTH;
-            display.add(businessRules, gbc);
-            System.out.println("Business Rules added!");
-
-            /** Toevoeging van de Signalen **/
-            gbc.gridx = 3;
-            gbc.gridy = 2;
-            gbc.gridheight = 1;
-            gbc.insets = new Insets(2,5,5,2);
-            gbc.anchor = GridBagConstraints.LAST_LINE_END;
-            gbc.fill = GridBagConstraints.BOTH;
-            display.add(signals, gbc);
-            System.out.println("Signals added!");
-
-
-
-        setVisible(true);
-
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            setVisible(true);
+            setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         }
+
+
 
 
 

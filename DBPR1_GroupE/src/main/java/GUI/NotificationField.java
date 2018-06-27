@@ -1,31 +1,56 @@
 package GUI;
 
+import Controllers.StringListener;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class NotificationField extends Field{
 
     private GridBagConstraints gbc;
-    private JTextPane notifications;
+    private JTextArea notifications;
+    private StringListener textListener;
 
 
     public NotificationField(){
-
-//        Dimension dim = getPreferredSize();
-//        dim.width = 900;
-//        dim.height = 200;
-//        setPreferredSize(dim);
-
-
+        setLayout(new GridBagLayout());
 
         this.createBorder("Notifications");
         gbc = new GridBagConstraints();
-        notifications = new JTextPane();
-        add(new JLabel("this is a notifcation"));
+        notifications = new JTextArea();
+        notifications.setEditable(false);
+        notifications.setLineWrap(true);
+        notifications.setSize(1,1);
 
-        gbc.fill = GridBagConstraints.FIRST_LINE_START;
-        gbc.anchor = GridBagConstraints.FIRST_LINE_START;
-        add(notifications, gbc);
+        gbc.weightx =1;
+        gbc.weighty = 1;
 
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.WEST;
+        gbc.fill = GridBagConstraints.BOTH;
+        add(new JScrollPane(notifications), gbc);
     }
+
+
+
+    public void setStringListener(StringListener listener){
+        this.textListener = listener;
+    }
+
+
+    public JTextArea getNotifications() {
+        //Returns the TextPane in notifications
+        return notifications;
+    }
+
+    public void setNotifications(JTextArea notifications) {
+        this.notifications = notifications;
+    }
+
+    public void updateNotifications(String notification){
+            getNotifications().append(notification);
+    }
+
+
 }
