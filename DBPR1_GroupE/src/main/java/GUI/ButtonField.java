@@ -92,9 +92,13 @@ public class ButtonField extends Field implements ActionListener {
         if(clicked == exportBtn) {
             if (textListener != null) {
                 //System.out.println("exportBtn Clicked");
-                textListener.textEmitted("exportBtn Clicked \n");
+                exportToCSV();
             }
         }
+    }
+
+    private void exportToCSV() {
+        
     }
 
     public void setStringListener(StringListener listener){
