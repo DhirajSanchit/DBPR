@@ -16,6 +16,8 @@ public class Query {
     private String insertSignaalQuery, input;
 
     public Query(){
+
+        Query query = new Query();
         profitCleverSignal = new ArrayList<>();
         profitAdSignal = new ArrayList<>();
         cleverAdSignal = new ArrayList<>();
@@ -78,19 +80,19 @@ public class Query {
 
         /** Clever-AD  Signaal **/
         cleverAdSignal.add(
-                "Select * from dbo.PersoonCodes " +
+                "Select code from dbo.PersoonCodes " +
                         "where Code = 'Andere Code'"
         );
 
         cleverAdSignal.add(
-                "Select *\n" +
+                "Select code" +
                         "from dbo.PersoonCodes \n" +
                         "PC left joiN dbo.[AD-Export] AD ON PC.Code= AD.Username_Pre2000 \n" +
                         "where PC.code like '%hhs' and PC.code not like 'NULLhhs' and AD.Disabled = 0"
         );
 
         cleverAdSignal.add(
-                "Select * from dbo.PersoonCodes \n" +
+                "Select code from dbo.PersoonCodes \n" +
                         "INNER JOIN dbo.[AD-Export] on dbo.PersoonCodes.code = dbo.[AD-Export].Username_Pre2000\n" +
                         "where Einddatum IS NOT NULL"
         );
@@ -102,8 +104,10 @@ public class Query {
                         "where Username_Pre2000 IS NULL and pc.code != 'Andere Code' "
         );
 
-    }
 
+
+
+    }
 
 
 

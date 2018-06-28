@@ -1,9 +1,14 @@
 package DB;
 
-import java.sql.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Database {
 
@@ -12,9 +17,30 @@ public class Database {
     private Connection conn;
     private Statement stat;
     private ArrayList<Signaal> signaalLijst;
-    private ArrayList<ArrayList<String>> arrayListAL;
+    private ArrayList<ArrayList<String>> signaalItemsList;
     private ArrayList<String> data;
     private ResultSet resultSet;
+
+    public Database(String properties) {
+
+        propertiesFile = properties;
+        signaalLijst = new ArrayList<>();
+        signaalItemsList = new ArrayList<>();
+
+
+        try {
+            DBProperties.init(propertiesFile);
+            conn = DBProperties.getConnection();
+            System.out.println("Verbinding gemaakt...");
+        } catch (SQLException e) {
+            System.out.println("Fout: " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Fout: kan " + propertiesFile + " niet openen.");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Fout: JDBC-driver niet gevonden.");
+        }
+    }
+
 
     public void queryexe(String db, String qry, boolean result) throws SQLException {
         stat = conn.createStatement();
@@ -35,20 +61,22 @@ public class Database {
 
     }
 
-    public void fill(){
-        for(int i = 0; i< signaalLijst.size(); i++){
+    public void fill() {
+        for (int i = 0; i < signaalLijst.size(); i++) {
             data = new ArrayList<String>();
             data.add(Integer.toString(signaalLijst.get(i).getTabelid()));
             data.add(signaalLijst.get(i).getCode());
             data.add(signaalLijst.get(i).getEmployeeusername());
             data.add(signaalLijst.get(i).getUsername_pre2000());
             data.add(signaalLijst.get(i).getAfkomstVan());
-            arrayListAL.add(data);
-            //System.out.println(arrayListAL.get(i));
+            signaalItemsList.add(data);
+            //System.out.println(signaalItemsList.get(i));
         }
     }
 
-    /** DATABASE RESULTSET**/
+    /**
+     * DATABASE RESULTSET
+     **/
 
     public void saveres(ResultSet rSet, int type) {
         try {
@@ -166,23 +194,12 @@ public class Database {
     }
 
 
-
-    /** END DATBASE RSULTSET**/
-
-
-
+    /**
+     * END DATBASE RSULTSET
+     **/
 
 
-
-
-
-
-
-
-
-
-
-    public void closeconnection() {
+    public void closeConnection() {
 
         try {
             conn.close();
@@ -192,22 +209,22 @@ public class Database {
         }
     }
 
-    public String[][] listToArray(){
-        String[][] array = new String[arrayListAL.size()][];
-        for (int i = 0; i < arrayListAL.size(); i++) {
-            ArrayList<String> row = arrayListAL.get(i);
+    // arraylist naar array, zodat de data gevuld kunnen worden in respectivelijke tabellen tabellen
+    public String[][] listToArray() {
+        String[][] array = new String[signaalItemsList.size()][];
+        for (int i = 0; i < signaalItemsList.size(); i++) {
+            ArrayList<String> row = signaalItemsList.get(i);
             array[i] = row.toArray(new String[row.size()]);
         }
         return array;
     }
 
 
-
     public ResultSet getResultSet() {
         return resultSet;
     }
 
-    public void setResultSet(ResultSet resultSet){
+    public void setResultSet(ResultSet resultSet) {
         this.resultSet = resultSet;
     }
 
@@ -215,7 +232,9 @@ public class Database {
         return signaalLijst;
     }
 
-    public ArrayList<ArrayList<String>> getarrayListAL(){
-        return arrayListAL;
+    public ArrayList<ArrayList<String>> getarrayListAL() {
+        return signaalItemsList;
     }
+
 }
+

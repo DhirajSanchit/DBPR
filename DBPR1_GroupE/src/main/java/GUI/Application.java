@@ -7,7 +7,6 @@ import DB.Query;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Application extends JFrame {
     private JList brRapportList;
@@ -23,32 +22,43 @@ public class Application extends JFrame {
     private ButtonField buttons;
     private Display display;
 
-    private Database legerDesHeilsDB;
-    private Database signaalDB;
+    private Database ldhDb;
+    private String legerdbfile = "database.properties";
+
+    private Database signaalDb;
+    private String signaaldbfile = "signaal.properties";
+//
     private Query queryList;
 
     {
         setTitle("Leger des Heils - Audit");
         setSize(1200, 1000);
+
     }
 
         public Application () {
             display = new Display();
-            legerDesHeilsDB = new Database();
-            signaalDB = new Database();
-            queryList = new Query();
+
+            initializeDatabases();
+            
+
 
             databaseConnection = new DBConnection();
+
             this.getContentPane().add(display);
             setVisible(true);
             setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         }
 
+    private void initializeDatabases() {
+        ldhDb = new Database(legerdbfile);
+        signaalDb = new Database(signaaldbfile);
+        queryList = new Query();
+        System.out.println("test");
+    }
 
 
-
-
-        public final void start(){
+    public final void start(){
          startConnection();
          }
 
@@ -57,8 +67,9 @@ public class Application extends JFrame {
         /**Method om de database connectie te starten**/
         public void startConnection(){
             /**Database connectie start   **/
-            databaseConnection.login("appie3","admin1234567890");
-            display.getNotfications().updateNotifications("Verbinding gemaakt!");
+            databaseConnection.login(DBConnection.getUrlAuditBlackBox(),"appie3","admin1234567890");
+            //databaseConnection.login(DBConnection.getUrlSignaal(),"appie3", "admin1234567890");
+            display.getNotfications().updateNotifications("Verbinding gemaakt! \n");
         }
 
     /**Method om de database connectie te stoppen**/

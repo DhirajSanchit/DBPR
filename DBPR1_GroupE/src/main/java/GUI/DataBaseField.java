@@ -9,12 +9,16 @@ package GUI;
 **/
 
 
+import DB.Query;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import java.awt.*;
+import java.sql.*;
+import java.util.Vector;
 
 import static javafx.scene.input.KeyCode.J;
 
@@ -27,7 +31,7 @@ public class DataBaseField extends Field {
     private JScrollPane adScrollPane, prScrollPane, clvrScrollPane;
     private GridBagConstraints gbc;
     private JTable activeDirectoryTable, profitTable, cleverTable;
-
+    private Query query = new Query();
 
     private String[] columnNames = {"Source", "Hit", "Last", "Ur_Diff", "Source", "Hit", "Last", "Ur_Diff"};
     private Object[][] data = {
@@ -95,6 +99,7 @@ public class DataBaseField extends Field {
         profitField = new Field();
         cleverField = new Field();
 
+        //Resultset resultset = stmt query.getCleverAdSignal(1);
 
         ///////// AuditBlackBox Tables/////////
         activeDirectoryTable = new JTable(model);
@@ -252,20 +257,44 @@ public class DataBaseField extends Field {
         return cleverTable;
     }
 
-    public void updateTable(JTable tableName, String[][] data, String[] names) {
+//    public void updateTable(JTable tableName, String[][] data, String[] names) {
+//
+//        if(tableName == activeDirectoryTable){
+//            System.out.println("AD filled");
+//        } if (tableName == profitTable){
+//            System.out.println("profit");
+//        }
+//        if (tableName == cleverTable) {
+//            System.out.println("clever filled");
+//        }
 
-        if(tableName == activeDirectoryTable){
-            System.out.println("AD filled");
-        } if (tableName == profitTable){
-            System.out.println("profit");
+        public static DefaultTableModel buildTableModel(ResultSet rs)
+        throws SQLException {
+
+            ResultSetMetaData metaData = rs.getMetaData();
+
+            // names of columns
+            Vector<String> columnNames = new Vector<String>();
+            int columnCount = metaData.getColumnCount();
+            for (int column = 1; column <= columnCount; column++) {
+                columnNames.add(metaData.getColumnName(column));
+            }
+
+            // data of the table
+            Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+            while (rs.next()) {
+                Vector<Object> vector = new Vector<Object>();
+                for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
+                    vector.add(rs.getObject(columnIndex));
+                }
+                data.add(vector);
+            }
+
+            return new DefaultTableModel(data, columnNames);
+
         }
-        if (tableName == cleverTable) {
-            System.out.println("clever filled");
-        }
-
-
 
 
     }
-}
+
 

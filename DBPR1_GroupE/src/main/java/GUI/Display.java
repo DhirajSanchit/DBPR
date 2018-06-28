@@ -71,6 +71,7 @@ public class Display extends Field{
         gbc.anchor = GridBagConstraints.NORTHEAST;
         gbc.fill = GridBagConstraints.BOTH;
         add(businessRules, gbc);
+        businessRules.setRules();
         System.out.println("Business Rules added!");
 
         /** Toevoeging van de Signalen **/
