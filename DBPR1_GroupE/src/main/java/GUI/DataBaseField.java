@@ -252,7 +252,7 @@ public class DataBaseField extends Field {
         return cleverTable;
     }
 
-    public void updateTable(JTable tableName) {
+    public void updateTable(JTable tableName, String[][] data, String[] names) {
 
         if(tableName == activeDirectoryTable){
             System.out.println("AD filled");
@@ -262,6 +262,9 @@ public class DataBaseField extends Field {
         if (tableName == cleverTable) {
             System.out.println("clever filled");
         }
+
+
+
 
     }
 }

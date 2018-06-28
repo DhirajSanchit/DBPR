@@ -108,6 +108,13 @@ public class Display extends Field{
         }
 
 
+    public void setData(String[][] data, String[] names){
+        //myTable = new JTable(data,names);
+
+
+    }
+
+
 
     public ButtonField getButtons() {
         return buttons;

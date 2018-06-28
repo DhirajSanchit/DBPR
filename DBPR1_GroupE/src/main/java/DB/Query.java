@@ -12,9 +12,6 @@ public class Query {
     private final ArrayList<String> profitAdSignal;
     private final ArrayList<String> cleverAdSignal;
 
-
-
-
     private final ArrayList<String> impactQeurys;
     private String insertSignaalQuery, input;
 
@@ -26,7 +23,6 @@ public class Query {
         impactQeurys = new ArrayList<>();
 
         /** Profit-Clever  Signaal **/
-
          profitCleverSignal.add(
                 "Select AD.EmployeeUsername, PC.Code \n" +
                         "from dbo.[AfasProfit-Export] \n" +
@@ -81,7 +77,6 @@ public class Query {
 
 
         /** Clever-AD  Signaal **/
-
         cleverAdSignal.add(
                 "Select * from dbo.PersoonCodes " +
                         "where Code = 'Andere Code'"

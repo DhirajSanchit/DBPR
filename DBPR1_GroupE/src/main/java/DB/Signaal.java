@@ -8,7 +8,7 @@ public class Signaal {
         public Signaal(int tabelid, String code, String employeeUsername, String username_pre2000, String afkomstVan) {
             this.tabelid = tabelid;
             this.username_pre2000 = username_pre2000;
-            this.employeeusername = employeeUsername; // baacount
+            this.employeeusername = employeeUsername; // BA-acount
             this.code = code;
             this.afkomstVan = afkomstVan;
         }

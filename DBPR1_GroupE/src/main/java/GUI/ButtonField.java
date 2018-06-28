@@ -98,7 +98,7 @@ public class ButtonField extends Field implements ActionListener {
     }
 
     private void exportToCSV() {
-        
+
     }
 
     public void setStringListener(StringListener listener){

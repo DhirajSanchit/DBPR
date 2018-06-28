@@ -2,6 +2,9 @@ package GUI;
 
 
 import DB.DBConnection;
+import DB.Database;
+import DB.Query;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -20,6 +23,10 @@ public class Application extends JFrame {
     private ButtonField buttons;
     private Display display;
 
+    private Database legerDesHeilsDB;
+    private Database signaalDB;
+    private Query queryList;
+
     {
         setTitle("Leger des Heils - Audit");
         setSize(1200, 1000);
@@ -27,6 +34,10 @@ public class Application extends JFrame {
 
         public Application () {
             display = new Display();
+            legerDesHeilsDB = new Database();
+            signaalDB = new Database();
+            queryList = new Query();
+
             databaseConnection = new DBConnection();
             this.getContentPane().add(display);
             setVisible(true);
