@@ -1,5 +1,7 @@
 package DB;
 
+import GUI.Display;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,7 +17,7 @@ public class DBConnection {
 
 
 
-    public void login(String username, String password) {
+    public void login(String username, String password)  throws ClassCastException {
         String url = "jdbc:sqlserver://localhost:1433;databaseName=AuditBlackBox";
         Connection con = null;
 

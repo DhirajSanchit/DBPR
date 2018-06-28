@@ -47,6 +47,7 @@ public class Application extends JFrame {
         public void startConnection(){
             /**Database connectie start   **/
             databaseConnection.login("appie3","admin1234567890");
+            display.getNotfications().updateNotifications("Verbinding gemaakt!");
         }
 
     /**Method om de database connectie te stoppen**/

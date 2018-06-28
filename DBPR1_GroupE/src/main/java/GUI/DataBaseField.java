@@ -29,7 +29,7 @@ public class DataBaseField extends Field {
     private JTable activeDirectoryTable, profitTable, cleverTable;
 
 
-    private String[] columnNames = {"Source", "Hit", "Last", "Ur_Diff","Source", "Hit", "Last", "Ur_Diff"};
+    private String[] columnNames = {"Source", "Hit", "Last", "Ur_Diff", "Source", "Hit", "Last", "Ur_Diff"};
     private Object[][] data = {
             {"Swing Timer", 2.99, 5, 1.01},
             {"Swing Worker", 7.10, 5, 1.010},
@@ -75,52 +75,51 @@ public class DataBaseField extends Field {
 //            {"TableModelListener", 25.05, 5, 1.01},
 
 
-};
+    };
     private DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
 
-
-    public DataBaseField(){
+    public DataBaseField() {
 
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         createBorder("Databases");
 
-    /** instantie layout manager items **/
+        /** instantie layout manager items **/
         gbc = new GridBagConstraints();
         setLayout(new GridBagLayout());
 
-    /** Swing instanties voor de Audit blackbox DB  **/
+        /** Swing instanties voor de Audit blackbox DB  **/
 
-     ///////// Fields for respective tables/////////
-     activeDirectoryField = new Field();
-     profitField = new Field ();
-     cleverField = new Field ();
-
-
-      ///////// AuditBlackBox Tables/////////
-      activeDirectoryTable = new JTable(model);
-      profitTable = new JTable(model);
-      cleverTable = new JTable(model);
+        ///////// Fields for respective tables/////////
+        activeDirectoryField = new Field();
+        profitField = new Field();
+        cleverField = new Field();
 
 
-      //////// Scrollpanes making the tablefields scrollable/////////
-      adScrollPane = new JScrollPane(activeDirectoryTable,
-              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-      prScrollPane = new JScrollPane(profitTable,
-              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
-      clvrScrollPane = new JScrollPane(cleverTable,
-              ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-              ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        ///////// AuditBlackBox Tables/////////
+        activeDirectoryTable = new JTable(model);
+        profitTable = new JTable(model);
+        cleverTable = new JTable(model);
 
-        activeDirectoryTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+
+        //////// Scrollpanes making the tablefields scrollable/////////
+        adScrollPane = new JScrollPane(activeDirectoryTable,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        prScrollPane = new JScrollPane(profitTable,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        clvrScrollPane = new JScrollPane(cleverTable,
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        activeDirectoryTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         activeDirectoryTable.setFillsViewportHeight(true);
 
-        profitTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+        profitTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         profitTable.setFillsViewportHeight(true);
 
-        cleverTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
+        cleverTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         cleverTable.setFillsViewportHeight(true);
 //
 
@@ -132,22 +131,15 @@ public class DataBaseField extends Field {
 //        gbc.anchor = GridBagConstraints.CENTER;
 
 
-        /** /////////////// TABLE EXPERIMENTATION ////////////////////  **/
-
-        /** /////////////// TABLE EXPERIMENTATION //////////////////// **/
-
-
-
-
         ///////// GridbagConstrains constants/////////
         gbc.weightx = 0.005;
         gbc.weighty = 0.005;
         gbc.fill = GridBagConstraints.BOTH;
-        Insets insets = new Insets(5,5,10,5);
+        Insets insets = new Insets(5, 5, 10, 5);
 
         ///////// Active Directory /////////
         activeDirectoryField.setBackground(Color.RED);
-        activeDirectoryField.createBorder("Active Directory");
+        activeDirectoryField.createBorder("Profit-Clever");
         activeDirectoryField.setLayout(new GridBagLayout());
 
         gbc.fill = GridBagConstraints.BOTH;
@@ -160,17 +152,17 @@ public class DataBaseField extends Field {
         gbc.gridy = 1;
         activeDirectoryField.add(adScrollPane, gbc);
 
-        gbc.gridx=0;
-        gbc.gridy=0;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.FIRST_LINE_START;
         //gbc.insets = insets;
         gbc.fill = GridBagConstraints.BOTH;
-        gbc.gridwidth = 1/100;
+        gbc.gridwidth = 1 / 100;
         add(activeDirectoryField, gbc);
 
         /////// Profit /////////
         profitField.setBackground(Color.BLUE);
-        profitField.createBorder("Profit");
+        profitField.createBorder("Profit-AD ");
         profitField.setLayout(new GridBagLayout());
 
         gbc.fill = GridBagConstraints.BOTH;
@@ -195,7 +187,7 @@ public class DataBaseField extends Field {
 
         /////// Clever /////////
         cleverField.setBackground(Color.GREEN);
-        cleverField.createBorder("Clever");
+        cleverField.createBorder("Clever-AD  ");
         cleverField.setLayout(new GridBagLayout());
 
         gbc.fill = GridBagConstraints.BOTH;
@@ -209,13 +201,13 @@ public class DataBaseField extends Field {
         cleverField.add(clvrScrollPane, gbc);
 
 
-        gbc.anchor = GridBagConstraints.NORTHWEST;;
+        gbc.anchor = GridBagConstraints.NORTHWEST;
+        ;
         //gbc.insets = insets;
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridx = 0;
         gbc.gridy = 3;
         add(cleverField, gbc);
-
 
 
 //        gbc.gridx = 0;
@@ -234,18 +226,6 @@ public class DataBaseField extends Field {
 //        add(cleverField, gbc);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         /////////////// TABLE CELLS/ DATA CANNOT BE EDITTED////////////////////
         cleverField.setEnabled(false);
         profitTable.setEnabled(false);
@@ -258,9 +238,31 @@ public class DataBaseField extends Field {
 //        cleverField.add(cleverTable);
         /////////////// TABLE EXPERIMENT END ////////////////////
 
-     }
+    }
 
+    public JTable getActiveDirectoryTable() {
+        return activeDirectoryTable;
+    }
 
+    public JTable getProfitTable() {
+        return profitTable;
+    }
 
+    public JTable getCleverTable() {
+        return cleverTable;
+    }
 
+    public void updateTable(JTable tableName) {
+
+        if(tableName == activeDirectoryTable){
+            System.out.println("AD filled");
+        } if (tableName == profitTable){
+            System.out.println("profit");
+        }
+        if (tableName == cleverTable) {
+            System.out.println("clever filled");
+        }
+
+    }
 }
+
