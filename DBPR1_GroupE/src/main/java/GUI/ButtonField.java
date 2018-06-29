@@ -145,7 +145,7 @@ public class ButtonField extends Field implements ActionListener {
 
     private void exportToCSV() throws FileNotFoundException {
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
         Date date = new Date();
 
         File file = new File("Signalen_" + dateFormat.format(date) + ".csv");

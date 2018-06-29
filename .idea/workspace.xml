@@ -15,7 +15,36 @@
     <SUITE FILE_PATH="coverage/DBPR$Main.ic" NAME="Main Coverage Results" MODIFIED="1528231971693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ButtonField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Query.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#3974#3975#0" expanded="true" />
+                <element signature="e#4022#4023#0" expanded="true" />
+                <element signature="e#4068#4069#0" expanded="true" />
+                <element signature="e#4112#4113#0" expanded="true" />
+                <element signature="e#4158#4159#0" expanded="true" />
+                <element signature="e#4202#4203#0" expanded="true" />
+                <element signature="e#4255#4256#0" expanded="true" />
+                <element signature="e#4289#4290#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,16 +65,16 @@
       <find>signalsField</find>
       <find>JTable</find>
       <find>profitTable</find>
-      <find>new JTA</find>
+      <find />
       <find>activeDirectoryTable</find>
       <find>setPreferredScrollableViewportSize</find>
-      <find>/ P</find>
+      <find />
       <find>inset</find>
       <find>HORIZONTAL</find>
-      <find>gbc.fill = GridBagConstraints.BOTH</find>
+      <find />
       <find>gridhe</find>
       <find>gridwi</find>
-      <find>gbc.fill = GridBagConstraints.HORIZONTAL</find>
+      <find />
       <find>createBorder</find>
       <find>TableModel</find>
       <find>afkomstigVan</find>
@@ -60,8 +89,8 @@
     </findStrings>
     <replaceStrings>
       <replace>add</replace>
-      <replace>gbc.fill = GridBagConstraints.HORIZONTAL</replace>
-      <replace>gbc.fill = GridBagConstraints.BOTH</replace>
+      <replace />
+      <replace />
       <replace>signaalLijst</replace>
       <replace>rSet.</replace>
       <replace>arrayListAL</replace>
@@ -102,13 +131,13 @@
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/NotificationField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/BusinessRulesField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/DataBaseField.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/Controllers/Test.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Display.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/Application.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java" />
         <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Database.java" />
+        <option value="$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java" />
       </list>
     </option>
   </component>
@@ -196,6 +225,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DBPR" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DBPR" type="462c0819:PsiDirectoryNode" />
+              <item name="DBPR1_GroupE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -395,15 +433,16 @@
       <workItem from="1530201108580" duration="5989000" />
       <workItem from="1530243585274" duration="1695000" />
       <workItem from="1530247340277" duration="2089000" />
-      <workItem from="1530256531297" duration="5824000" />
+      <workItem from="1530256531297" duration="6632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256484000" />
+    <option name="totallyTimeSpent" value="257292000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -778,36 +817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-          <folding>
-            <element signature="e#3974#3975#0" expanded="true" />
-            <element signature="e#4022#4023#0" expanded="true" />
-            <element signature="e#4068#4069#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
-            <element signature="e#4158#4159#0" expanded="true" />
-            <element signature="e#4202#4203#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
-            <element signature="e#4289#4290#0" expanded="true" />
-            <element signature="e#4520#4521#0" expanded="true" />
-            <element signature="e#4561#4562#0" expanded="true" />
-            <element signature="e#4818#4819#0" expanded="true" />
-            <element signature="e#4852#4853#0" expanded="true" />
-            <element signature="e#4909#4910#0" expanded="true" />
-            <element signature="e#4951#4952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -837,6 +846,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="14" column="36" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#3974#3975#0" expanded="true" />
+            <element signature="e#4022#4023#0" expanded="true" />
+            <element signature="e#4068#4069#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4158#4159#0" expanded="true" />
+            <element signature="e#4202#4203#0" expanded="true" />
+            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#4289#4290#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
