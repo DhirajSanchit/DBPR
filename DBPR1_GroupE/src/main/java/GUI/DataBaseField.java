@@ -28,18 +28,16 @@ public class DataBaseField extends Field  {
     private JScrollPane adScrollPane, prScrollPane, clvrScrollPane;
     private GridBagConstraints gbc;
     private JTable activeDirectoryTable, profitTable, cleverTable;
-    private Object[][] data2 = {};
 
     private Database database;
-    private String[] columnNames = {"Code", "Employeeusername", "Username_pre2000"};
+    private String[] columnNamesAD = {"Code", "Employeeusername", "IsVerwijderd", "Business Rule"};
+    private String[] columnNamesPr = {"EmployeeUsername", "Username_Pre2000", "afas.ContractEndDate", "Business Rule"};
+    private String[] columnNamesCl = {"id", "code", "Username_pre2000", "Business Rule"};
     private Object[][] data = {};
 
-    private DefaultTableModel admodel = new DefaultTableModel(data, columnNames);
-    private DefaultTableModel prmodel = new DefaultTableModel(data, columnNames);
-
-
-
-    private DefaultTableModel clmodel = new DefaultTableModel(data, columnNames);
+    private DefaultTableModel admodel = new DefaultTableModel(data, columnNamesAD);
+    private DefaultTableModel prmodel = new DefaultTableModel(data, columnNamesPr);
+  private DefaultTableModel clmodel = new DefaultTableModel(data, columnNamesCl);
 
     public DataBaseField() throws SQLException {
 
@@ -193,10 +191,6 @@ public class DataBaseField extends Field  {
 
     public JTable getCleverTable() {
         return cleverTable;
-    }
-
-    public void getData(Object[][] data2) {
-        this.data2 = data2;
     }
 
     public void addSignaal(DefaultTableModel model, Object[] signaal) {
