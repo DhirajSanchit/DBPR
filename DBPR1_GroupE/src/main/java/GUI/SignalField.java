@@ -67,32 +67,13 @@ public class SignalField extends Field{
         signalTable.setEnabled(false);
         signalTable.setAutoResizeMode( JTable.AUTO_RESIZE_OFF );
         signalTable.setFillsViewportHeight(true);
+
+        Object[] myObject = {"TEST","TEST2","TEST3", "TEST4", "TEST5"};
+        model.setColumnIdentifiers(myObject);
+
     }
 
-    /**
-     *
-     *         cleverField.setBackground(Color.GREEN);
-     *         cleverField.createBorder("Clever-AD  ");
-     *         cleverField.setLayout(new GridBagLayout());
-     *
-     *         gbc.fill = GridBagConstraints.BOTH;
-     *         gbc.anchor = GridBagConstraints.NORTH;
-     *         gbc.gridx = 0;
-     *         gbc.gridy = 0;
-     *         cleverField.add(cleverTable.getTableHeader(), gbc);
-     *         gbc.anchor = GridBagConstraints.NORTH;
-     *         gbc.gridx = 0;
-     *         gbc.gridy = 1;
-     *         cleverField.add(clvrScrollPane, gbc);
-     *
-     *
-     *         gbc.anchor = GridBagConstraints.NORTHWEST;;
-     *         //gbc.insets = insets;
-     *         gbc.fill = GridBagConstraints.BOTH;
-     *         gbc.gridx = 0;
-     *         gbc.gridy = 3;
-     *         add(cleverField, gbc);
-     */
+
 
 
     public Field getSignalField() {
@@ -133,5 +114,9 @@ public class SignalField extends Field{
 
     public void setModel(DefaultTableModel model) {
         this.model = model;
+    }
+
+    public void addSignaal(Object[] signaal) {
+        model.addRow(signaal);
     }
 }

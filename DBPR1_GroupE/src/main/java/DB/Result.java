@@ -3,10 +3,8 @@ package DB;
 import java.awt.List;
 import java.util.ArrayList;
 
-
 public class Result {
 
-    public Query query = new Query();
     private String type;
     private ArrayList<Signaal> signals;
 
@@ -22,6 +20,5 @@ public class Result {
     public ArrayList<Signaal> getSignals() {
         return signals;
     }
-
 
 }

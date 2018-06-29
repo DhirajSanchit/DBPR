@@ -3,26 +3,23 @@ package GUI;
 /**
 
  TODO:
-  - adjust insets setting
-  - fill the elements with the query results
+ - adjust insets setting
+ - fill the elements with the query results
 
-**/
+ **/
 
 
-import DB.Query;
+import DB.Database;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 import java.awt.*;
-import java.sql.*;
-import java.util.Vector;
+import java.sql.SQLException;
 
-import static javafx.scene.input.KeyCode.J;
 
-public class DataBaseField extends Field {
+public class DataBaseField extends Field  {
+    private Database ldhdatabase;
+
 
     private Field activeDirectoryField;
     private Field profitField;
@@ -31,59 +28,22 @@ public class DataBaseField extends Field {
     private JScrollPane adScrollPane, prScrollPane, clvrScrollPane;
     private GridBagConstraints gbc;
     private JTable activeDirectoryTable, profitTable, cleverTable;
-    private Query query = new Query();
+    private Object[][] data2 = {};
 
-    private String[] columnNames = {"Source", "Hit", "Last", "Ur_Diff", "Source", "Hit", "Last", "Ur_Diff"};
-    private Object[][] data = {
-            {"Swing Timer", 2.99, 5, 1.01},
-            {"Swing Worker", 7.10, 5, 1.010},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"Swing Worker", 7.10, 5, 1.010},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"Swing Timer", 2.99, 5, 1.01},
-            {"Swing Worker", 7.10, 5, 1.010},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"Swing Worker", 7.10, 5, 1.010},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
-//            {"TableModelListener", 25.05, 5, 1.01},
+    private Database database;
+    private String[] columnNames = {"Code", "Employeeusername", "Username_pre2000"};
+    private Object[][] data = {};
+
+    private DefaultTableModel admodel = new DefaultTableModel(data, columnNames);
+    private DefaultTableModel prmodel = new DefaultTableModel(data, columnNames);
 
 
-    };
-    private DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
+    private DefaultTableModel clmodel = new DefaultTableModel(data, columnNames);
 
-    public DataBaseField() {
+    public DataBaseField() throws SQLException {
+
+        ldhdatabase = new Database();
 
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
         createBorder("Databases");
@@ -99,13 +59,10 @@ public class DataBaseField extends Field {
         profitField = new Field();
         cleverField = new Field();
 
-        //Resultset resultset = stmt query.getCleverAdSignal(1);
-
         ///////// AuditBlackBox Tables/////////
-        activeDirectoryTable = new JTable(model);
-        profitTable = new JTable(model);
-        cleverTable = new JTable(model);
-
+        activeDirectoryTable = new JTable(admodel);
+        profitTable = new JTable(prmodel);
+        cleverTable = new JTable(clmodel);
 
         //////// Scrollpanes making the tablefields scrollable/////////
         adScrollPane = new JScrollPane(activeDirectoryTable,
@@ -118,22 +75,10 @@ public class DataBaseField extends Field {
                 ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
                 ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
-        activeDirectoryTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
         activeDirectoryTable.setFillsViewportHeight(true);
-
-        profitTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         profitTable.setFillsViewportHeight(true);
-
-        cleverTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         cleverTable.setFillsViewportHeight(true);
-//
-
-//        gbc.weightx = 0.0001;
-//        gbc.weighty = 0.0001;
-//        gbc.gridx = 0;
-//        gbc.gridy = 0;
-//        gbc.fill = GridBagConstraints.BOTH;
-//        gbc.anchor = GridBagConstraints.CENTER;
 
 
         ///////// GridbagConstrains constants/////////
@@ -235,14 +180,7 @@ public class DataBaseField extends Field {
         cleverField.setEnabled(false);
         profitTable.setEnabled(false);
         activeDirectoryTable.setEnabled(false);
-
-
-        /////////////// TABLE EXPERIMENTATION ////////////////////
-//        activeDirectoryField.add(activeDirectoryTable);
-//        profitField.add(profitTable);
-//        cleverField.add(cleverTable);
-        /////////////// TABLE EXPERIMENT END ////////////////////
-
+        /////////////// TABLE CELLS/ DATA CANNOT BE EDITTED END////////////////
     }
 
     public JTable getActiveDirectoryTable() {
@@ -257,44 +195,32 @@ public class DataBaseField extends Field {
         return cleverTable;
     }
 
-//    public void updateTable(JTable tableName, String[][] data, String[] names) {
-//
-//        if(tableName == activeDirectoryTable){
-//            System.out.println("AD filled");
-//        } if (tableName == profitTable){
-//            System.out.println("profit");
-//        }
-//        if (tableName == cleverTable) {
-//            System.out.println("clever filled");
-//        }
-
-        public static DefaultTableModel buildTableModel(ResultSet rs)
-        throws SQLException {
-
-            ResultSetMetaData metaData = rs.getMetaData();
-
-            // names of columns
-            Vector<String> columnNames = new Vector<String>();
-            int columnCount = metaData.getColumnCount();
-            for (int column = 1; column <= columnCount; column++) {
-                columnNames.add(metaData.getColumnName(column));
-            }
-
-            // data of the table
-            Vector<Vector<Object>> data = new Vector<Vector<Object>>();
-            while (rs.next()) {
-                Vector<Object> vector = new Vector<Object>();
-                for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
-                    vector.add(rs.getObject(columnIndex));
-                }
-                data.add(vector);
-            }
-
-            return new DefaultTableModel(data, columnNames);
-
-        }
-
-
+    public void getData(Object[][] data2) {
+        this.data2 = data2;
     }
 
+    public void addSignaal(DefaultTableModel model, Object[] signaal) {
+        if(model == admodel) {
+            admodel.addRow(signaal);
+        }
+        if(model == prmodel) {
+            prmodel.addRow(signaal);
+        }
+        if(model ==clmodel) {
+            clmodel.addRow(signaal);
+        }
+    }
+
+    public DefaultTableModel getAdmodel() {
+        return admodel;
+    }
+
+    public DefaultTableModel getPrmodel() {
+        return prmodel;
+    }
+
+    public DefaultTableModel getClmodel() {
+        return clmodel;
+    }
+}
 

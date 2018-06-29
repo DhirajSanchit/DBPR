@@ -1,7 +1,5 @@
 package GUI;
 
-import Controllers.StringListener;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,7 +7,6 @@ public class NotificationField extends Field{
 
     private GridBagConstraints gbc;
     private JTextArea notifications;
-    private StringListener textListener;
 
 
     public NotificationField(){
@@ -34,9 +31,6 @@ public class NotificationField extends Field{
 
 
 
-    public void setStringListener(StringListener listener){
-        this.textListener = listener;
-    }
 
 
     public JTextArea getNotifications() {
@@ -49,7 +43,7 @@ public class NotificationField extends Field{
     }
 
     public void updateNotifications(String notification){
-            getNotifications().append(notification);
+        getNotifications().append(notification);
     }
 
 

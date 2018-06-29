@@ -1,10 +1,10 @@
 package GUI;
 
 import Controllers.StringListener;
-import DB.DBConnection;
+import DB.Database;
 
-import javax.swing.*;
 import java.awt.*;
+import java.sql.SQLException;
 
 public class Display extends Field{
 
@@ -14,18 +14,20 @@ public class Display extends Field{
     private SignalField signals;
     private NotificationField notfications;
     private GridBagConstraints gbc;
+    private Database ldhdatabase;
 
-
-    public Display(){
+    public Display() throws SQLException{
 
         setLayout(new GridBagLayout());
         gbc = new GridBagConstraints();
 
         /** Hoofd display van de applicatie**/
-        buttons = new ButtonField();
+
         auditBlackBox = new DataBaseField();
         businessRules = new BusinessRulesField();
         signals = new SignalField();
+        buttons = new ButtonField(signals, auditBlackBox);
+
         notfications = new NotificationField();
 
 
@@ -106,16 +108,7 @@ public class Display extends Field{
             }
         });
 
-        }
-
-
-    public void setData(String[][] data, String[] names){
-        //myTable = new JTable(data,names);
-
-
     }
-
-
 
     public ButtonField getButtons() {
         return buttons;
