@@ -1,10 +1,6 @@
 package DB;
 
-import com.sun.org.apache.bcel.internal.classfile.Code;
-
 import java.util.ArrayList;
-
-import static java.sql.JDBCType.NULL;
 
 public class Query {
 
@@ -16,16 +12,13 @@ public class Query {
     private String insertSignaalQuery, input;
 
     public Query(){
-
-        Query query = new Query();
         profitCleverSignal = new ArrayList<>();
         profitAdSignal = new ArrayList<>();
         cleverAdSignal = new ArrayList<>();
-
         impactQeurys = new ArrayList<>();
 
         /** Profit-Clever  Signaal **/
-         profitCleverSignal.add(
+        profitCleverSignal.add(
                 "Select AD.EmployeeUsername, PC.Code \n" +
                         "from dbo.[AfasProfit-Export] \n" +
                         "AD LEFT JOIN dbo.PersoonCodes PC ON AD.EmployeeUsername= PC.Code \n " +
@@ -61,7 +54,7 @@ public class Query {
 
 
 
-         profitAdSignal.add(
+        profitAdSignal.add(
                 " use AuditBlackBox\n" +
                         " Select AD.Username_Pre2000, afas.ContractEndDate,  AD.Disabled\n" +
                         " from dbo.[AfasProfit-Export] afas " +
@@ -73,26 +66,26 @@ public class Query {
                 " use AuditBlackBox\n" +
                         "Select EmployeeUsername, Username_Pre2000\n" +
                         "from dbo.[AD-Export] \n" +
-                        "LEFT JOIN dbo.[AfasProfit-Export] ON Username_Pre2000=EmployeeUsername\"\n" +
+                        "LEFT JOIN dbo.[AfasProfit-Export] ON Username_Pre2000=EmployeeUsername \n" +
                         "where EmployeeUsername IS NULL"
         );
 
 
         /** Clever-AD  Signaal **/
         cleverAdSignal.add(
-                "Select code from dbo.PersoonCodes " +
+                "Select id, code from dbo.PersoonCodes " +
                         "where Code = 'Andere Code'"
         );
 
         cleverAdSignal.add(
-                "Select code" +
+                "Select id, code\n" +
                         "from dbo.PersoonCodes \n" +
                         "PC left joiN dbo.[AD-Export] AD ON PC.Code= AD.Username_Pre2000 \n" +
                         "where PC.code like '%hhs' and PC.code not like 'NULLhhs' and AD.Disabled = 0"
         );
 
         cleverAdSignal.add(
-                "Select code from dbo.PersoonCodes \n" +
+                "Select id, code from dbo.PersoonCodes \n" +
                         "INNER JOIN dbo.[AD-Export] on dbo.PersoonCodes.code = dbo.[AD-Export].Username_Pre2000\n" +
                         "where Einddatum IS NOT NULL"
         );
@@ -104,10 +97,8 @@ public class Query {
                         "where Username_Pre2000 IS NULL and pc.code != 'Andere Code' "
         );
 
-
-
-
     }
+
 
 
 

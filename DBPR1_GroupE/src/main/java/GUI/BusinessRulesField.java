@@ -61,16 +61,17 @@ public class BusinessRulesField extends Field {
         gbc.fill = GridBagConstraints.BOTH;
         add(new JScrollPane(businessRulesList), gbc);
     }
-
     public void setRules(){
         for(int i = 0; i < businessRules.length; i++) {
-        for(int j = 0; j < businessRules[i].length; j++) {
-            businessRulesList.append(" " + businessRules[i][j]);
-        }
+            for(int j = 0; j < businessRules[i].length; j++) {
+                businessRulesList.append(" " + businessRules[i][j]);
+            }
             businessRulesList.append("\n");
 
         }
     }
+
+
 
 }
 
