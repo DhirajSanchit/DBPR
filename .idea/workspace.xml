@@ -16,29 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ButtonField.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-63">
-              <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Query.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="306">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
-                <element signature="e#3974#3975#0" expanded="true" />
-                <element signature="e#4022#4023#0" expanded="true" />
-                <element signature="e#4068#4069#0" expanded="true" />
-                <element signature="e#4112#4113#0" expanded="true" />
-                <element signature="e#4158#4159#0" expanded="true" />
-                <element signature="e#4202#4203#0" expanded="true" />
-                <element signature="e#4255#4256#0" expanded="true" />
-                <element signature="e#4289#4290#0" expanded="true" />
+                <element signature="e#5216#5217#0" expanded="true" />
+                <element signature="e#5251#5252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,7 +150,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="645" />
     <option name="width" value="666" />
     <option name="height" value="775" />
@@ -433,12 +418,12 @@
       <workItem from="1530201108580" duration="5989000" />
       <workItem from="1530243585274" duration="1695000" />
       <workItem from="1530247340277" duration="2089000" />
-      <workItem from="1530256531297" duration="6632000" />
+      <workItem from="1530256531297" duration="7003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257292000" />
+    <option name="totallyTimeSpent" value="257663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -454,7 +439,7 @@
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49923313" visible="true" weight="0.34365326" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49923313" weight="0.34365326" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32972136" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="2" />
@@ -466,7 +451,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3993808" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="280" height="584" id="Documentation" order="10" side_tool="true" weight="0.327454" />
@@ -817,24 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="157" column="20" lean-forward="true" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
-          <folding>
-            <element signature="e#5216#5217#0" expanded="true" />
-            <element signature="e#5251#5252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Signaal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -849,17 +816,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Query.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding>
             <element signature="e#3974#3975#0" expanded="true" />
             <element signature="e#4022#4023#0" expanded="true" />
@@ -869,6 +836,24 @@
             <element signature="e#4202#4203#0" expanded="true" />
             <element signature="e#4255#4256#0" expanded="true" />
             <element signature="e#4289#4290#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/GUI/ButtonField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="154" column="34" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DBPR1_GroupE/src/main/java/DB/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#5216#5217#0" expanded="true" />
+            <element signature="e#5251#5252#0" expanded="true" />
           </folding>
         </state>
       </provider>
