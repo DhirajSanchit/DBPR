@@ -10,15 +10,7 @@ import java.awt.*;
 import java.sql.SQLException;
 
 public class Application extends JFrame {
-    private JList brRapportList;
-    private JLabel rapportLabel;
-    private JTextPane feedbackField;
-    private GridBagConstraints gbc;
-    private GridBagLayout gridBag;
-    private DataBaseField auditBlackBox;
-    private BusinessRulesField businessRules;
-    private SignalField signals;
-    private NotificationField notfications;
+
     private DBConnection databaseConnection;
     private ButtonField buttons;
     private Display display;

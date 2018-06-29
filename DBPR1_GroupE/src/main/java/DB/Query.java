@@ -120,14 +120,6 @@ public class Query {
 
 
 
-//    public String getSignaalQuery(int i) {
-//        return signaalQuerys.get(i);
-//    }
-//
-//    public int getSignaalQlistSize() {
-//        return signaalQuerys.size();
-//    }
-
     public String getInsertSignaalQuery() {
         return insertSignaalQuery;
     }
