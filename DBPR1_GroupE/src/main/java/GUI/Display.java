@@ -1,6 +1,6 @@
 package GUI;
 
-import Controllers.StringListener;
+import Interfaces.StringListener;
 import DB.Database;
 
 import java.awt.*;

@@ -1,6 +1,6 @@
 package GUI;
 
-import Controllers.StringListener;
+import Interfaces.StringListener;
 import DB.Database;
 import DB.Signaal;
 
@@ -14,7 +14,6 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
