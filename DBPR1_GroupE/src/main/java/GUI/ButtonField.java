@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -126,16 +127,19 @@ public class ButtonField extends Field implements ActionListener {
     }
 
     public void getSignals(){
-        //ArrayList<Signaal> list = ldhdatabase.getList();
         textListener.textEmitted("Signalen worden opgehaald...\n");
         for(Signaal signaal : ldhdatabase.getList(ldhdatabase.getSignaalADLijst())) {
             abb.addSignaal(abb.getAdmodel(), new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
+            signals.addSignaal(new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
         }
         for(Signaal signaal : ldhdatabase.getList(ldhdatabase.getSignaalPrLijst())) {
             abb.addSignaal(abb.getPrmodel(), new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
+           signals.addSignaal(new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
+
         }
         for(Signaal signaal : ldhdatabase.getList(ldhdatabase.getSignaalClLijst())) {
             abb.addSignaal(abb.getClmodel(), new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
+            signals.addSignaal(new Object[] {signaal.getCode(),signaal.getEmployeeusername(),signaal.getUsername_pre2000()});
         }
         textListener.textEmitted("Signalen opgehaald\n");
     }
